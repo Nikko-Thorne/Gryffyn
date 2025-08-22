@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Newspaper, TrendingUp, Star, ExternalLink } from 'lucide-react';
 
 const StayInLoop = () => {

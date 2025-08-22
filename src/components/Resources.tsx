@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, FileText, Calculator, Star, BookOpen, Users } from 'lucide-react';
 
 import { Home, TrendingUp } from 'lucide-react';

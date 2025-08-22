@@ -1,4 +1,3 @@
-import React from 'react';
 import { TrendingUp, Camera, DollarSign, Users, ExternalLink } from 'lucide-react';
 
 const ForSellers = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home, Users, TrendingUp, FileText, Star, Shield } from 'lucide-react';
 
 const Services = () => {

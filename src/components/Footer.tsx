@@ -1,5 +1,4 @@
-import React from 'react';
-import { Globe, Linkedin, Mail, Heart, Facebook, Instagram } from 'lucide-react';
+import { Globe, Linkedin, Mail, Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,6 +52,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
@@ -61,6 +61,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
@@ -69,6 +70,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
@@ -77,12 +79,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                aria-label="LinqApp Profile"
               >
                 <Globe size={20} />
               </a>
               <a
                 href="mailto:gryffynjerniganrealtor@gmail.com"
                 className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                aria-label="Email"
               >
                 <Mail size={20} />
               </a>

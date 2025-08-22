@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronDown, Globe, Linkedin, Mail, Facebook, Instagram } from 'lucide-react';
 
 const Hero = () => {
@@ -55,6 +54,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            aria-label="Facebook"
           >
             <Facebook size={24} />
           </a>
@@ -63,6 +63,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            aria-label="Instagram"
           >
             <Instagram size={24} />
           </a>
@@ -71,6 +72,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            aria-label="LinkedIn"
           >
             <Linkedin size={24} />
           </a>
@@ -79,12 +81,14 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            aria-label="LinqApp Profile"
           >
             <Globe size={24} />
           </a>
           <a
             href="mailto:gryffynjerniganrealtor@gmail.com"
             className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            aria-label="Email"
           >
             <Mail size={24} />
           </a>
@@ -94,6 +98,7 @@ const Hero = () => {
           <button
             onClick={scrollToAbout}
             className="text-gray-400 hover:text-white transition-colors duration-300"
+            aria-label="Scroll to About section"
           >
             <ChevronDown size={32} />
           </button>

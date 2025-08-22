@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home, Search, FileText, Key, ExternalLink } from 'lucide-react';
 
 const ForBuyers = () => {

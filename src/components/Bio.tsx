@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, GraduationCap, MapPin, Star } from 'lucide-react';
 
 const Bio = () => {

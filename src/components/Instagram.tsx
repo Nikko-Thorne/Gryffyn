@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram, Users, Heart } from 'lucide-react';
 
 const InstagramSection = () => {
