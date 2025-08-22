@@ -98,6 +98,9 @@ const Footer = () => {
           <p className="text-gray-400">
             © {currentYear} Gryffyn Jernigan, REALTOR®. All rights reserved.
           </p>
+          <p className="text-gray-500 text-sm mt-2">
+            Powered by <a href="https://techton.cloud/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors duration-200">Techton</a>
+          </p>
         </div>
       </div>
     </footer>
