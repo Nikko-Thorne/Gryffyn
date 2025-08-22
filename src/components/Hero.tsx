@@ -53,7 +53,7 @@ const Hero = () => {
             href="https://facebook.com/gryffynjernigan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
             aria-label="Facebook"
           >
             <Facebook size={24} />
@@ -62,7 +62,7 @@ const Hero = () => {
             href="https://www.instagram.com/gryffynjernigan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
             aria-label="Instagram"
           >
             <Instagram size={24} />
@@ -71,7 +71,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/gryffyn-jernigan-46b81a230"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
             aria-label="LinkedIn"
           >
             <Linkedin size={24} />
@@ -80,14 +80,14 @@ const Hero = () => {
             href="https://linqapp.com/gryffyn_jernigan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
             aria-label="LinqApp Profile"
           >
             <Globe size={24} />
           </a>
           <a
             href="mailto:gryffynjerniganrealtor@gmail.com"
-            className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
+            className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
             aria-label="Email"
           >
             <Mail size={24} />
@@ -97,7 +97,7 @@ const Hero = () => {
         <div className="absolute bottom-8 animate-bounce">
           <button
             onClick={scrollToAbout}
-            className="text-gray-400 hover:text-white transition-colors duration-300"
+            className="text-gray-300 hover:text-white transition-colors duration-300 p-3 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             aria-label="Scroll to About section"
           >
             <ChevronDown size={32} />
