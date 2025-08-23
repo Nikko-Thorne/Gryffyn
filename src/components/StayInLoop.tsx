@@ -19,7 +19,7 @@ const StayInLoop = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Newsletter Section */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-sm flex flex-col">
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full mb-4">
                 <Mail className="w-6 h-6" />
@@ -29,12 +29,12 @@ const StayInLoop = () => {
                 "Confessions of a Spokane Realtor"
               </h4>
               <p className="text-gray-600">
-                Honest insights, market updates, and behind-the-scenes stories 
+                Honest insights, market updates, and behind-the-scenes stories
                 from your local REALTOR®.
               </p>
             </div>
             
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-6 flex-grow">
               <div className="flex items-center space-x-3 p-3 bg-indigo-50 rounded-lg">
                 <TrendingUp className="w-5 h-5 text-indigo-600" />
                 <span className="text-gray-700">Weekly market updates</span>
@@ -62,7 +62,7 @@ const StayInLoop = () => {
           </div>
 
           {/* Client Testimonials */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
+          <div className="bg-white p-8 rounded-2xl shadow-sm flex flex-col">
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full mb-4">
                 <Star className="w-6 h-6" />
@@ -73,14 +73,14 @@ const StayInLoop = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl mb-6">
+            <div className="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl mb-6 flex-grow">
               <div className="flex items-center space-x-1 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                 ))}
               </div>
               <p className="text-gray-700 italic mb-3">
-                "Gryffyn made our first home buying experience seamless and stress-free. 
+                "Gryffyn made our first home buying experience seamless and stress-free.
                 His knowledge of the Spokane market was invaluable!"
               </p>
               <p className="text-sm text-gray-600 font-semibold">- Happy Homeowners</p>

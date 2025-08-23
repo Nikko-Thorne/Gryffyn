@@ -91,7 +91,7 @@ const ForBuyers = () => {
           
           <div className="mt-8 text-center">
             <a
-              href="mailto:gryffynjerniganrealtor@gmail.com?subject=I'm ready to start buying!"
+              href="#contact"
               className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
             >
               <span>I'm Ready to Buy!</span>

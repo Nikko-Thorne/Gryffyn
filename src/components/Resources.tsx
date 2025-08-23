@@ -70,7 +70,7 @@ const Resources = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="resources" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

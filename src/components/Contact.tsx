@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { Mail, MessageCircle, Calendar, Send, CheckCircle } from 'lucide-react';
+import { MessageCircle, Calendar, Send, CheckCircle, X } from 'lucide-react';
+import PrivacyPolicy from './PrivacyPolicy';
 
-const Contact = () => {
+interface ContactProps {
+  showPrivacyPolicy: boolean;
+  setShowPrivacyPolicy: (show: boolean) => void;
+}
+
+const Contact = ({ showPrivacyPolicy, setShowPrivacyPolicy }: ContactProps) => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -9,6 +15,7 @@ const Contact = () => {
     optIn: false
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showFullConsent, setShowFullConsent] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const target = e.target;
@@ -32,13 +39,6 @@ const Contact = () => {
 
   const contactMethods = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      description: "Get in touch about your real estate needs",
-      action: "Send Email",
-      link: "mailto:gryffynjerniganrealtor@gmail.com"
-    },
-    {
       icon: <MessageCircle className="w-6 h-6" />,
       title: "LinqApp Profile",
       description: "Visit my complete profile and resources",
@@ -55,14 +55,15 @@ const Contact = () => {
   ];
 
   return (
+    <>
     <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+      <div id="contact" className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Make Your Move?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Whether you're buying your first home, selling your current property, or looking to invest, 
+            Whether you're buying your first home, selling your current property, or looking to invest,
             I'm here to help you achieve your real estate goals. Let's start the conversation today.
           </p>
         </div>
@@ -186,28 +187,56 @@ const Contact = () => {
                       required
                       className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
                     />
-                    <label htmlFor="optIn" className="text-sm text-gray-600 leading-relaxed">
-                      I agree to be contacted by <strong>Gryffyn Jernigan</strong> via call, email, and text for real estate services. 
-                      To opt-out, you can reply 'stop\' at any time or reply \'help\' for assistance. You can also click the 
-                      unsubscribe link in the emails. Message and data rates may apply. Message frequency may vary.
-                    </label>
+                    <div className="ml-2">
+                      <label htmlFor="optIn" className="text-sm text-gray-600 leading-relaxed cursor-pointer">
+                        I agree to be contacted by <strong>Gryffyn Jernigan</strong> via call, email, and text for real estate services.
+                        <span className="text-blue-600 cursor-pointer hover:underline ml-1" onClick={() => setShowFullConsent(!showFullConsent)}>
+                          {showFullConsent ? ' Show Less' : ' Read More'}
+                        </span>
+                        {showFullConsent && (
+                          <p className="text-xs text-gray-500 mt-1 transition-all duration-300 ease-in-out">
+                            To opt-out, you can reply 'stop' at any time or reply 'help' for assistance. You can also click the
+                            unsubscribe link in the emails. Message and data rates may apply. Message frequency may vary.
+                            <span className="text-blue-600 cursor-pointer hover:underline ml-1" onClick={() => setShowPrivacyPolicy(true)}>
+                              Privacy Policy
+                            </span>.
+                          </p>
+                        )}
+                      </label>
+                    </div>
                   </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={!formState.optIn}
+                    className="w-full bg-gradient-to-r from-blue-600 to-amber-600 hover:from-blue-700 hover:to-amber-700 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none flex items-center justify-center space-x-2"
+                  >
+                    <Send size={20} />
+                    <span>Send Message</span>
+                  </button>
                 </div>
-                
-                <button
-                  type="submit"
-                  disabled={!formState.optIn}
-                  className="w-full bg-gradient-to-r from-blue-600 to-amber-600 hover:from-blue-700 hover:to-amber-700 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none flex items-center justify-center space-x-2"
-                >
-                  <Send size={20} />
-                  <span>Send Message</span>
-                </button>
-              </form>
+            </form>
             )}
           </div>
         </div>
       </div>
     </section>
+
+    {showPrivacyPolicy && (
+      <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div className="bg-white rounded-lg p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative">
+          <button
+            onClick={() => setShowPrivacyPolicy(false)}
+            className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+            title="Close privacy policy"
+          >
+            <X size={24} />
+          </button>
+          <PrivacyPolicy />
+        </div>
+      </div>
+    )}
+  </>
   );
 };
 

@@ -33,7 +33,7 @@ const Hero = () => {
 
         <div className="flex space-x-6 mb-12 animate-fade-in-up animation-delay-1500">
           <a
-            href="mailto:gryffynjerniganrealtor@gmail.com"
+            href="#contact"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
           >
             <Mail size={20} />
@@ -86,7 +86,7 @@ const Hero = () => {
             <Globe size={24} />
           </a>
           <a
-            href="mailto:gryffynjerniganrealtor@gmail.com"
+            href="#contact"
             className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-110"
             aria-label="Email"
           >

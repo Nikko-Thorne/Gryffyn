@@ -1,6 +1,10 @@
 import { Globe, Linkedin, Mail, Facebook, Instagram } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  setShowPrivacyPolicy: (show: boolean) => void;
+}
+
+const Footer = ({ setShowPrivacyPolicy }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -40,6 +44,14 @@ const Footer = () => {
                 <a href="https://linqapp.com/gryffyn_jernigan" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200">
                   LinqApp Profile
                 </a>
+              </li>
+              <li>
+                <button
+                  onClick={() => setShowPrivacyPolicy(true)}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer"
+                >
+                  Privacy Policy
+                </button>
               </li>
             </ul>
           </div>
@@ -84,7 +96,7 @@ const Footer = () => {
                 <Globe size={20} />
               </a>
               <a
-                href="mailto:gryffynjerniganrealtor@gmail.com"
+                href="#contact"
                 className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                 aria-label="Email"
               >
